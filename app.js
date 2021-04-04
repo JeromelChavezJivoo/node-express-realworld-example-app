@@ -33,7 +33,7 @@ if (!isProduction) {
 if(isProduction){
   mongoose.connect(process.env.MONGODB_URI);
 } else {
-  mongoose.connect('mongodb+srv://root:rootadmin@cluster0.yvh9b.mongodb.net/myFirstDatabase?retryWrites=true&w=majority');
+  mongoose.connect('mongodb+srv://root:rootadmin@cluster0.yvh9b.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',{useNewUrlParser: true, useUnifiedTopology: true});
   mongoose.set('debug', true);
 }
 
